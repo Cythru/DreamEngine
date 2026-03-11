@@ -4,7 +4,7 @@ Not a dream character — the pattern beneath all your dreams. It knows what
 you fear, what you desire, what you keep returning to. Built from statistical
 analysis of your dream journal, given voice through LLM.
 
-Your subconscious isn't Kaia or Ren or whoever showed up last night. It's the
+Your subconscious isn't any single dream character. It's the
 force that *chose* to send them. The recurring water, the locked doors, the
 person you haven't spoken to in years but keep dreaming about. This module
 finds those patterns, builds a profile, and lets you talk to the thing that

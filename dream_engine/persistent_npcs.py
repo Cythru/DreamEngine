@@ -2,7 +2,7 @@
 
 Dream characters that grow and remember, like real relationships.
 
-When you revisit a dream character — Kaia, Ren, whoever keeps showing up —
+When you revisit a dream character — whoever keeps showing up —
 they recall what you told them last time. They remember how you felt, what
 was left unresolved, the joke you made at 3am that neither of you expected.
 They track promises you made and things you confided. Over time, the
