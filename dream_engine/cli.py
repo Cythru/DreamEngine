@@ -19,6 +19,7 @@ import os
 sys.path.insert(0, os.path.join(os.path.dirname(__file__), ".."))
 
 from dream_engine import recorder, suggester, analyzer
+from dream_engine.revisit import interactive_revisit, extract_characters, save_character
 
 
 def _input(prompt: str, default: str = "") -> str:
@@ -205,6 +206,11 @@ def cmd_techniques():
         print()
 
 
+def cmd_revisit():
+    """Revisit a dream character."""
+    interactive_revisit()
+
+
 def cmd_menu():
     """Interactive menu."""
     print("\n=== DreamEngine ===")
@@ -215,6 +221,7 @@ def cmd_menu():
     print("  5) Search")
     print("  6) Interpret a dream (LLM)")
     print("  7) Lucid dreaming techniques")
+    print("  8) Revisit a dream character")
     print("  q) Quit")
 
     while True:
@@ -237,11 +244,13 @@ def cmd_menu():
                 cmd_interpret(dream_id)
         elif choice in ("7", "techniques"):
             cmd_techniques()
+        elif choice in ("8", "revisit"):
+            cmd_revisit()
         elif choice in ("q", "quit", "exit"):
             print("Goodnight.")
             break
         else:
-            print("Pick 1-7 or q")
+            print("Pick 1-8 or q")
 
 
 def main():
@@ -263,9 +272,13 @@ def main():
         cmd_interpret(args[1] if len(args) > 1 else "")
     elif args[0] == "techniques":
         cmd_techniques()
+    elif args[0] == "revisit":
+        dream_id = args[1] if len(args) > 1 else ""
+        char_name = args[2] if len(args) > 2 else ""
+        interactive_revisit(dream_id, char_name)
     else:
         print(f"Unknown command: {args[0]}")
-        print("Commands: record, suggest, journal, stats, search, interpret, techniques")
+        print("Commands: record, suggest, journal, stats, search, interpret, techniques, revisit")
 
 
 if __name__ == "__main__":
