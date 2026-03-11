@@ -1,0 +1,3 @@
+brainflow>=5.20
+numpy
+pyaudio
